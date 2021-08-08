@@ -1,0 +1,22 @@
+<div class="row">
+    <% @cats.each do |cat| %>
+    <div class="col-12">
+        <h1 style="text-align:center;"><%= cat.title %></h1>
+        <hr />
+    </div>
+    <% @food_items.each do |food_item| %>
+    <% if food_item.category == cat %>
+    <div class="col-4">
+        <h5><%= food_item.title %></h5>
+        <p><%= food_item.description%></p>
+        <span><%= food_item.price %> <%= "| Available for catering" if food_item.catering? %></span>
+        <%= form_with model: @order_item do |f| %>
+        <%= f.hidden_field :food_item_id, value: food_item.id %>
+        <%= f.number_field :quantity, value: 1, min: 1%>
+        <%= f.submit "Add To Cart" %>
+        <% end %>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+</div>

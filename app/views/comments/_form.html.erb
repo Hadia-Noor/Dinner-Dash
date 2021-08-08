@@ -1,0 +1,37 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_field :body %>
+  </div>
+
+  <% default_cat = comment.food_item.nil? ? FoodItem.first.id : @comment.food_item.id %>
+
+  <div class="field">
+    <%= form.label :food_item %>
+    <%= form.select :food_item_id, options_from_collection_for_select(FoodItem.all, :id, :title, default_cat) %>
+  </div>
+
+
+
+  <div class="form-actions">
+    <%= form.button :submit %>
+  </div>
+<% end %>
+

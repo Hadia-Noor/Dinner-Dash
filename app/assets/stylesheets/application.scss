@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.page-container {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%
+}
+.title-card {
+  background-color: #111;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+}
+.title-text {
+color: #FFF;
+  text-align: center;
+  font-size: 6em;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  background-image:url('dinner-dash.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding:0%;
+  margin:0%;
+  overflow-x: hidden;
+  color:black
+
+}
+.home-page{
+  width: 200vw;
+  height: 100vh;
+  background-image: url("/catering.png");
+  background-size: 100% 100%;
+  margin-top: 2vw;
+
+
+}
+
+.menu-page {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background:white;
+}
+
+.catering-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/catering.png");
+  background-size: 100% 100%;
+}
+.info-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/info.png");
+  background-size: 100% 100%;
+}
+.reviews-page {
+  background:white;
+}
+
+.link-container {
+  padding-left: 1em;
+  padding-top: 0.25em;
+  .link {
+      color: #FFF;
+  }
+  .active {
+      color: rgba(255,255,255,0.75);
+  }
+  .link:active {
+      color: rgba(255,255,255,0.75)
+  }
+}
+
