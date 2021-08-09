@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_08_08_191402) do
   create_table "orders", force: :cascade do |t|
     t.decimal "subtotal"
     t.decimal "total"
-    t.boolean "paid"
+    t.boolean "paid", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

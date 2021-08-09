@@ -6,11 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-A1 = User.create(first_name: "Hadia",
-  last_name: "Noor",
-  email: "hadianoor@gmail.com",
+A1 = User.create(first_name: "Josh",
+  last_name: "Cheek",
+  email: "demo+josh@jumpstartlab.com",
   password: "password",
   password_confirmation: "password",
+  username: "josh",
   admin: true)
 
 appitizer = Category.create(title: 'Appitizer', description: 'appitizer', display:true )
@@ -47,3 +48,20 @@ F20 = FoodItem.create(title: "Kabab", description: "kabab", price: 400, category
 C1 = Comment.create(Name: "Hadia", body: "Delicious", food_item: FoodItem.find(4))
 C2 = Comment.create(Name: "Noor", body: "Tasty",  food_item: FoodItem.find(5))
 C3 = Comment.create(Name: "Ali", body: "Great",  food_item: FoodItem.find(2))
+
+U1 = User.create(first_name: "Rachel",
+  last_name: "Warbelow",
+  email: "demo+rachel@jumpstartlab.com",
+  password: "password",
+  password_confirmation: "password")
+
+U2 = User.create(first_name: "Jeff",
+  last_name: "Casimir",
+  email: "demo+jeff@jumpstartlab.com",
+  password: "password",
+  password_confirmation: "password", username:"j3")
+
+O1 = Order.create(subtotal: 150, total: 300)
+O2 = Order.create(subtotal: 500, total: 1000)
+O3 = Order.create(subtotal: 250, total: 500)
+O4 = Order.create(subtotal: 150, total: 300)

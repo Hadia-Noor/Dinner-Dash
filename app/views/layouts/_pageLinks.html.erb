@@ -2,17 +2,20 @@
 
 
     <% if current_user %>
-    <% if current_user.admin %>
-    <h5 class="link-container">
-    <%= link_to "Food Items", "/food_items" %>
-    </h5>
-    <h5 class="link-container">
-    <%= link_to "Orders", "/cart" %>
-    </h5>
-    <h5 class="link-container">
-    <%= link_to "Categories", "/categories" %>
-    </h5>
-    <% end %>
+        <% if current_user.admin %>
+        <h5 class="link-container">
+        <%= link_to "Food Items", "/food_items" %>
+        </h5>
+        <h5 class="link-container">
+        <%= link_to "Cart", "/cart" %>
+        </h5>
+        <h5 class="link-container">
+        <%= link_to "Orders", "/orders" %>
+        </h5>
+        <h5 class="link-container">
+        <%= link_to "Categories", "/categories" %>
+        </h5>
+        <% end %>
     <h5 class="link-container">
         <%= link_to "Home", root_path %>
     </h5>
@@ -28,8 +31,8 @@
      <h5 class="link-container">
         <%= link_to "Log Out", destroy_user_session_path,  :method => :delete %>
     </h5>
-
-    <% else %>
+    <% end %>
+    <% if !current_user %>
     <h5 class="link-container">
         <%= link_to "Home", root_path %>
     </h5>
@@ -42,6 +45,9 @@
     <h5 class="link-container">
         <%= link_to "Customer Reviews", review_path %>
     </h5>
+    <h5 class="link-container">
+        <%= link_to "Cart", "/cart" %>
+    </div>
     <h5 class="link-container">
         <%= link_to "Sign up", new_user_registration_path %>
     </h5>

@@ -1,6 +1,6 @@
 class FoodItemsController < ApplicationController
   before_action :set_food_item, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
   # GET /food_items or /food_items.json
   def index
     @food_items = FoodItem.all

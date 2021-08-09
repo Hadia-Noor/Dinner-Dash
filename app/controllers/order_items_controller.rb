@@ -1,6 +1,5 @@
 class OrderItemsController < ApplicationController
   before_action :set_order
-
   def create
     @order_item = @order.order_items.new(order_params)
     @order.save
@@ -21,7 +20,7 @@ class OrderItemsController < ApplicationController
 
   private
   def order_params
-    params.require(:order_item).permit(:food_item_id, :quantity)
+    params.require(:order_item).permit(:food_item_id, :quantity, :subtotal, :total)
   end
 
   def set_order
