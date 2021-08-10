@@ -2,58 +2,58 @@
 
 
     <% if current_user %>
-        <% if current_user.admin %>
-        <h5 class="link-container" style="color:black">
-        <%= link_to "Food Items", "/food_items" %>
-        </h5>
-        <h5 class="link-container" style="color:white">
-        <%= link_to "Cart", "/cart" %>
-        </h5>
-        <h5 class="link-container" style="color:white">
-        <%= link_to "Orders", "/orders" %>
-        </h5>
-        <h5 class="link-container" style="color:white">
-        <%= link_to "Categories", "/categories" %>
-        </h5>
-        <% end %>
     <h5 class="link-container" style="color:white">
-        <%= link_to "Home", root_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Menu", menu_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "More Info", info_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Customer Reviews", review_path %>
-    </h5>
-     <h5 class="link-container" style="color:white">
-        <%= link_to "Log Out", destroy_user_session_path,  :method => :delete %>
-    </h5>
+            <%= link_to "Home", root_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+            <%= link_to "Menu", menu_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+            <%= link_to "More Info", info_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+            <%= link_to "Customer Reviews", review_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+            <%= link_to "Log Out", destroy_user_session_path,  :method => :delete %>
+            </h5>
+             <% if current_user.admin %>
+            <h5 class="link-container">
+            <%= link_to "Food Items", "/food_items" %>
+            </h5>
+            <h5 class="link-container">
+            <%= link_to "Cart", "/cart" %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+            <%= link_to "Orders", "/orders" %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+            <%= link_to "Categories", "/categories" %>
+            </h5>
+            
     <% end %>
-    <% if !current_user %>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Home", root_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Menu", menu_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "More Info", info_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Customer Reviews", review_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Cart", "/cart" %>
-    </div>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Sign up", new_user_registration_path %>
-    </h5>
-    <h5 class="link-container" style="color:white">
-        <%= link_to "Sign In", new_user_session_path %>
-    </h5>
+        <% else %>
+         <h5 class="link-container" style="color:white">
+                <%= link_to "Sign up", new_user_registration_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+                <%= link_to "Sign In", new_user_session_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+                <%= link_to "Home", root_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+                <%= link_to "Menu", menu_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+                <%= link_to "More Info", info_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+                <%= link_to "Customer Reviews", review_path %>
+            </h5>
+            <h5 class="link-container" style="color:white">
+                <%= link_to "Cart", "/cart" %>
+            </div>
 
 
     <% end %>
