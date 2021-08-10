@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # README
+=======
+>>>>>>> b182cfda5cc4a35d57d6d4847c68f6d8656097fe
 Dinner Dash
 In this project you’ll build an online commerce platform for a restaurant to facilitate online ordering.
 Base Expectations
@@ -6,6 +9,7 @@ You are to build an online ordering system for a restaurant which offers the com
 
 
 Unauthenticated Users
+<<<<<<< HEAD
 * As an unauthenticated user, I can:
 * Browse all items
 * Browse items by category
@@ -21,10 +25,28 @@ Unauthenticated users are NOT allowed to:
 * Checkout (until they log in)
 * View the administrator screens or use administrator functionality
 * Make themselves an administrator
+=======
+As an unauthenticated user, I can:
+Browse all items
+Browse items by category
+Add an item to my cart
+View my cart
+Remove an item from my cart
+Increase the quantity of a item in my cart
+Log in, which does not clear the cart
+
+
+Unauthenticated users are NOT allowed to:
+View another user’s private data (such as current order, etc.)
+Checkout (until they log in)
+View the administrator screens or use administrator functionality
+Make themselves an administrator
+>>>>>>> b182cfda5cc4a35d57d6d4847c68f6d8656097fe
 
 
 Authenticated Users (Non-Administrators)
 Allowed To:
+<<<<<<< HEAD
 * do everything Unauthenticated Users can do except "log in"
 log out
 * view their past orders with links to display each order
@@ -42,6 +64,25 @@ log out
 * view another user’s private data (such as current order, etc.)
 * view the administrator screens or use administrator functionality
 * make themselves an administrator
+=======
+do everything Unauthenticated Users can do except "log in"
+log out
+view their past orders with links to display each order
+on that order display page there are:
+items with quantity ordered and line-item subtotals
+links to each item description page
+the current status of the order
+order total price
+date/time order was submitted
+if completed or cancelled, display a timestamp when that action took place
+if any item is retired from the menu:
+they can still access the item page
+they cannot add it to a new cart
+NOT allowed to:
+view another user’s private data (such as current order, etc.)
+view the administrator screens or use administrator functionality
+make themselves an administrator
+>>>>>>> b182cfda5cc4a35d57d6d4847c68f6d8656097fe
 Administrators
 As an authenticated Administrator, I can:
 Create item listings including a name, description, price, and upload a photo
@@ -88,6 +129,7 @@ A user may optionally provide a display name that must be no less than 2 charact
 Order
 An order must belong to a user
 An order must be for one or more items currently being sold
+<<<<<<< HEAD
 
 
 Example Data(Seeds)
@@ -110,3 +152,26 @@ Note:
 For Authentication Use `Devise` gem
 And For Authorization Use `Pundit` gem.
 
+=======
+ 
+ 
+Example Data(Seeds)
+To support the evaluation process, please make the following available via the rake db:seed task in your application:
+Items
+At least 20 items of varying prices
+Some of the items should be attached to multiple categories
+Categories
+At least 5 categories with a varying number of member items
+Orders
+At least 10 sample orders, with at least two at each stage of fulfillment (ordered, completed, cancelled)
+Users
+Normal user with full name "Rachel Warbelow", email address "demo+rachel@jumpstartlab.com", password of "password" and no display name
+Normal user with full name "Jeff Casimir", email address "demo+jeff@jumpstartlab.com", password of "password" and display name "j3"
+Normal user with full name "Jorge Tellez", email address "demo+jorge@jumpstartlab.com", password of "password" and display name "novohispano"
+User with admin priviliges with full name "Josh Cheek", email address "demo+josh@jumpstartlab.com", password of "password", and display name "josh"
+
+
+Note:
+For Authentication Use `Devise` gem 
+And For Authorization Use `Pundit` gem.
+>>>>>>> b182cfda5cc4a35d57d6d4847c68f6d8656097fe
