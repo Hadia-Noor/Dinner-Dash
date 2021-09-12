@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module DinnerDash
   class Application < Rails::Application
+    config.paths.add 'app/api', glob: '**/*.rb'
+    config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 

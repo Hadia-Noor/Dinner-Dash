@@ -65,3 +65,5 @@ O1 = Order.create(subtotal: 150, total: 300)
 O2 = Order.create(subtotal: 500, total: 1000)
 O3 = Order.create(subtotal: 250, total: 500)
 O4 = Order.create(subtotal: 150, total: 300)
+fruits = ['Mango', 'Pineapple', 'Passion fruit', 'Dragonfruit']
+fruits.each{|fruit| Fruit.create(name: fruit, description: "I am a delicious #{fruit}.")}
